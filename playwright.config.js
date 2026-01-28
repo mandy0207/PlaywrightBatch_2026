@@ -8,7 +8,7 @@ const config=({
   reporter : 'html',
   timeout: 40*1000,
   expect : {
-    timeout: 50*1000
+    timeout: 10*1000
   },
 
   use: {
