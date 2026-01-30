@@ -13,7 +13,7 @@ const { test, expect } = require('@playwright/test');
 // });
 
 
-test.only('My second playwright test', async ({ browser, page }) => {
+test('My second playwright test', async ({ browser, page }) => {
     //open page
     await page.goto("https://demowebshop.tricentis.com/");
     //asserting title of page
@@ -58,15 +58,6 @@ test.only('My second playwright test', async ({ browser, page }) => {
     
   // await page.locator('.product-title a').all().filter({hasText:'Blue Jeans'}).click();
    //await page.pause();
-
-
-
-
-
-
-
-
-
 
 
 
