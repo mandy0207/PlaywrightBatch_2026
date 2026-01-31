@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
- test.only('My first playwright test', async ({ page }) => {
+ test('learn auto wait concepts', async ({ page }) => {
  await page.goto("https://www.noon.com/uae-en/");
  const homeKitchen = page.locator("[data-qa='btn_main_menu_Home & Kitchen']");
 
