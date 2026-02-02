@@ -10,7 +10,7 @@ const { text } = require('node:stream/consumers');
  });
 
 
-test.only('Dynamic Dropdown', async ({ page }) => {
+test('Dynamic Dropdown', async ({ page }) => {
  await page.goto("https://vinothqaacademy.com/drop-down/");
  //for scrolling
  await page.locator(".selection [class*='multiple']").scrollIntoViewIfNeeded();
