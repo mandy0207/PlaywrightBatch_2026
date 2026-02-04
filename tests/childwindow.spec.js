@@ -15,8 +15,6 @@ test('My first playwright test', async ({browser }) => {
 
     ]);
 
-
-
 //  await expect(newPage).toHaveTitle('New Window');
 
   const title=await newPage.title();

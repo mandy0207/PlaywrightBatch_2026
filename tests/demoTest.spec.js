@@ -14,6 +14,7 @@ await homeKitchen.locator("[class*='MainCategories-module'] ul ul li").first().c
 await page.locator("[data-qa='plp-product-box-name']").first().waitFor();
 const listofNames= await page.locator("[data-qa='plp-product-box-name']").allTextContents();
 
+
 console.log(listofNames);
 
 

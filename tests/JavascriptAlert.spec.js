@@ -4,11 +4,12 @@ const { test, expect } = require('@playwright/test');
 //but we can customize an event to listen dialog as below
 
 
-test.only('JavaScript Alert', async ({page }) => {
+test('JavaScript Alert', async ({page }) => {
 await page.goto("https://selenium.qabible.in/javascript-alert.php");
 page.on('dialog', async dialog=>{
+    //promise to wait for 2 seconds basically pausing a thread
     await new Promise(res=>setTimeout(res, 2000));
-    await dialog.accept("hello vinod !");
+    await dialog.accept("hello vinod !");        
 })
 
 await page.locator(".btn-success").click();
