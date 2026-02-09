@@ -58,7 +58,8 @@ test('My second playwright test', async ({ browser, page }) => {
     
   // await page.locator('.product-title a').all().filter({hasText:'Blue Jeans'}).click();
    //await page.pause();
-
+ 
+   
 
 
 });
