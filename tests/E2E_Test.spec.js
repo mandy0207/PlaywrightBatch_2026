@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { faker } = require('@faker-js/faker');
 
 
-test.only('E2E Test', async ({page }) => {
+test('E2E Test', async ({page }) => {
 await page.goto("https://www.stg.kinship.com/uk");
 await page.getByRole('button',{name: 'Reject All'}).click();
 await page.getByRole('button',{'name': 'Maybe Later'}).click();
@@ -24,7 +24,7 @@ async function createUser(page){
     await page.locator('#checkbox__newsletterLabel').click();
     await page.locator('#checkbox__agreementLabel').click();
     await page.getByRole('button', { name: 'Create My Account' }).click();
-   
+    await page.waitForLoadState('networkidle');
 }
 
 function getFakeData(type) {
