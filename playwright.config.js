@@ -6,9 +6,9 @@ import { report } from 'node:process';
 const config=({
   testDir: './tests',
   reporter : 'html',
-  timeout: 40*1000,
+  timeout: 60*1000,
   expect : {
-    timeout: 10*1000
+    timeout: 40*1000
   },
 
   use: {

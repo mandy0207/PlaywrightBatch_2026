@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 
-test.only('My first playwright test', async ({browser , page}) => {
+test('My first playwright test', async ({browser , page}) => {
    await page.goto("https://selenium.qabible.in/date-picker.php");
    let expecetedDate= "March 2027"
    
