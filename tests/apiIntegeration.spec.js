@@ -24,7 +24,7 @@ test.beforeAll(async () => {
 })
 
 
-test.only('learn api integeartion', async ({ page }) => {
+test('learn api integeartion', async ({ page }) => {
     await page.goto("https://www.demoblaze.com/index.html");
     await login(page);
     await verifyCartProducts(page);
