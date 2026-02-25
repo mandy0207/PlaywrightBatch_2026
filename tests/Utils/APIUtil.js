@@ -64,10 +64,21 @@ class APIUtil {
         }
     }
 
-
     createHeaders(token) {
         headers["Authorization"] = `Bearer ${token}`;
         return headers;
+    }
+
+    async interceptCall(urlToIntercept, fakeResponse, page) {
+        await page.route(urlToIntercept, async route => {
+            const response = await page.request.fetch(route.request());
+            const body = JSON.stringify(fakeResponse);
+            await route.fulfill({
+                response,
+                body
+            });
+
+        })
     }
 
 }
